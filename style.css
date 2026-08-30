@@ -1,0 +1,211 @@
+@font-face {
+  font-family: 'norse-bold';
+  src: url('fonts/Norsebold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url('fonts/Ubuntu-R.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    margin: 0;
+    height:100vh;
+    display:flex;
+    flex:auto;
+    flex-direction: row;
+    overflow:auto;
+}
+
+* {
+    font-family:'ubuntu';
+    font-size: medium;
+    color:antiquewhite;
+}
+
+#left-container {
+  display: flex;
+  flex:auto;
+  flex-direction: column;
+  background-image: url(pictures/cat.jpg);
+  background-position: center;
+  justify-content: space-around;
+  background-size:cover;
+  width: clamp(300px, 40%, 350px);
+  min-width: 300px;
+  height: 100vh;
+}
+
+#odin-banner {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+
+    padding-left:0;
+    padding-right:0;
+    padding-top:10px;
+    padding-bottom: 10px;
+
+    width:100%;
+    height: 100px;
+
+    margin-bottom: 65vh;
+    margin-top:15vh;
+
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px 0 rgba(6, 84, 14, 0.37);
+}
+
+#odin-photo {
+    height: 100px;
+    margin-left:20%;
+}
+
+#odin-text {
+    font-family: 'norse-bold';
+    font-size: 4rem;
+    margin-right:25%;
+}
+
+#image-credit-container {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    padding: 10px;
+    padding-left:0;
+    padding-right:0;
+
+    height: 20px;
+    width: 100%;
+
+    background-color: rgba(0,0,0 / 50%);
+    box-shadow: 0 8px 32px 0 rgba(6, 84, 14, 0.37);
+    backdrop-filter: blur(10px);
+}
+
+a:link {
+    color:antiquewhite;
+}
+
+a:hover {
+    color:green;
+}
+
+#right-container {
+    display: flex;
+    flex:auto;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 400px;
+    background-image: linear-gradient( to top right, rgb(13, 104, 13), rgb(202, 127, 14));
+    animation: gradient 5s ease infinite;
+}
+
+#right-upper-text {
+    padding-left: 20px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+em {
+    font-size: 1.3rem;
+}
+
+#form-section {
+    display:flex;
+    flex:auto;
+    flex-direction: row;
+    width: 100%;
+    align-self: center;
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: rgb(6, 53, 6, 50%);
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+                0 2px 2px hsl(0deg 0% 0% / 0.075),
+                0 4px 4px hsl(0deg 0% 0% / 0.075),
+                0 8px 8px hsl(0deg 0% 0% / 0.075),
+                0 16px 16px hsl(0deg 0% 0% / 0.075);
+    backdrop-filter: blur(10px);
+    height: 15%;
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+legend {
+    font-size: 1.3rem;
+    margin-left: 20px;
+}
+
+#form-container {
+    display:flex;
+    flex:auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+    width: 50vw;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+label {
+    font-size:0.8rem;
+    font-weight: 200;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+input {
+    color:black;
+    width: 160px;
+    overflow: scroll;
+}
+
+#form-left-part {
+    display:flex;
+    flex: auto;
+    flex-direction: column;
+}
+
+#form-right-part {
+    display:flex;
+    flex: auto;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+#button-section {
+    display:flex;
+    flex:auto;
+    flex-direction: row;
+    height: 20%;
+
+    align-items: space-between;
+    margin-left: 20px;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    background-color: rgb(6, 53, 6, 50%);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid antiquewhite;
+    border-radius: 10px;
+}
+
+#submit-button:hover {
+    background-color: antiquewhite;
+    color: black;
+    border: 1px solid black;
+}
