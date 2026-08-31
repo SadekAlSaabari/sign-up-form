@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
     <title>Sign Up Form</title>
     <link rel="icon" type="image/x-icon" href="pictures/odin-icon.png">
 </head>
+
 <body>
     <div id="left-container">
         <div id="odin-banner">
@@ -27,37 +30,53 @@
         </div>
 
         <div id="form-section">
-            <form id="login-form">
+            <form id="signup-form">
                 <legend>Let's do this!</legend>
 
                 <div id="form-container">
                     <div id="form-left-part">
                         <label for="fname">FIRST NAME</label>
-                        <input type="text" id="fname" name="fname" placeholder="First name here"><br>
+                        <input type="text" id="fname" name="fname" placeholder="First name here" required><br>
                         
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" placeholder="test@mail.com"><br>
+                        <input type="email" id="email" name="email" placeholder="test@mail.com" required><br>
 
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" placeholder="Password here"><br>
+                        <input type="password" id="password" name="password" placeholder="Password here" required><br>
                     </div>
 
                     <div id="form-right-part">
                         <label for="lname">LAST NAME</label>
-                        <input type="text" id="lname" name="lname" placeholder="Last name here"><br>      
+                        <input type="text" id="lname" name="lname" placeholder="Last name here" required><br>      
 
                         <label for="number">PHONE NUMBER</label>
-                        <input type="number" id="number" name="number" placeholder="Phone number here"><br>
+                        <input type="number" id="number" name="number" placeholder="Phone number here" required><br>
 
                         <label for="cpassword">CONFIRM PASSWORD</label>
-                        <input type="password" id="cpassword" name="cpassword" placeholder="Confirm password"><br>
+                        <input type="password" id="cpassword" name="cpassword" placeholder="Confirm password" required><br>
                     </div>
                 </div>
             </form>
         </div>
 
+        <script>
+            const password = document.getElementById("password");
+            const cPassword = document.getElementById("cpassword");
+
+            function passwordMatch() {
+                if (password.value != cPassword.value) {
+                    cPassword.setCustomValidity("Make sure your passwords match.");
+                } else {
+                    cPassword.setCustomValidity("");
+                }
+            }
+
+            password.addEventListener('change', passwordMatch);
+            cPassword.addEventListener('keyup', passwordMatch);
+        </script>
+
         <div id="button-section">
-            <button type="submit" form="login-form" id="submit-button">Create Account</button>
+            <button type="submit" form="signup-form" id="signup-button">Create Account</button>
 
             <p>Already have an account?&nbsp;<a id="login-link" href="login-page.html">Login</a></p>
         </div>

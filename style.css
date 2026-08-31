@@ -218,7 +218,7 @@ input:hover {
 
 button {
     height: 40px;
-    width: 100px;
+    width: 150px;
     background-color: rgb(6, 53, 6, 50%);
     margin-bottom: 10px;
     margin-top: 10px;
@@ -228,13 +228,13 @@ button {
     transition: transform 0.2s;
 }
 
-#submit-button:hover {
+button:hover {
     background-color: antiquewhite;
     color: black;
     border: 1px solid black;
     transform: scale(1.05);
 }
 
-#submit-button:active {
+button:active {
     transform: scale(0.95);
 }

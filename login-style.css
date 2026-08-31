@@ -228,13 +228,13 @@ button {
     transition: transform 0.2s;
 }
 
-#submit-button:hover {
+button:hover {
     background-color: antiquewhite;
     color: black;
     border: 1px solid black;
     transform: scale(1.05);
 }
 
-#submit-button:active {
+button:active {
     transform: scale(0.95);
 }
