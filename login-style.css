@@ -151,7 +151,7 @@ legend {
 #form-container {
     display:flex;
     flex:auto;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-self: center;
     width: 100%;
@@ -167,8 +167,8 @@ label {
 
 input {
     color:black;
-    width: 160px;
-    height:25px;
+    width: 240px;
+    height: 40px;
     overflow: scroll;
     border-radius: 5px;
     border: 1px solid black;
@@ -196,13 +196,13 @@ input:hover {
     display:flex;
     flex: auto;
     flex-direction: column;
+    margin-top:20px;
 }
 
 #form-right-part {
     display:flex;
     flex: auto;
     flex-direction: column;
-    margin-left: 15px;
 }
 
 #button-section {
