@@ -14,9 +14,9 @@ signupForm.addEventListener('submit', function(event) {
     if (userCheck) {
         alert("An account with this email already exists!");
         return;
-    }
+    };
 
     data.push({name, email, password});
     sessionStorage.setItem("users", JSON.stringify(data));
-    alert("Form submitted! Welcome aboard! \n You can try logging in if you want.");
+    alert("Form submitted! Welcome aboard!\nYou can try logging in if you want.");
 });
